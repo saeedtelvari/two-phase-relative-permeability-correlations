@@ -10,7 +10,7 @@ def oil_water(Sw, So, Swc, rock_type = 'UW'):
     if (Swc > 1) or (Swc <= 0):
         print('ssInvalid input')
         return
-    eff_sw = Sw/(1-Swc)
+    eff_sw = (Sw-Swc)/(1-Swc)
     eff_so = So/(1-Swc)
     krw = 0
     kro = 0
