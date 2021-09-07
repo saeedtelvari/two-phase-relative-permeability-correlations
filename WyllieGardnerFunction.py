@@ -1,13 +1,13 @@
 import numpy as np
 
 def oil_water(Sw = 0, So = 0, Swc = 0, rock_type = 'UW'):
-    if (Sw > 1) or (Sw <= 0):
+    if (Sw > 1) or (Sw < 0):
         print('Invalid input : Sw')
         return
-    if (So > 1) or (So <= 0):
+    if (So > 1) or (So < 0):
         print('Invalid input : So')
         return
-    if (Swc > 1) or (Swc <= 0):
+    if (Swc > 1) or (Swc < 0):
         print('Invalid input : Swc')
         return
     eff_sw = (Sw-Swc)/(1-Swc)
@@ -27,10 +27,10 @@ def oil_water(Sw = 0, So = 0, Swc = 0, rock_type = 'UW'):
     return krw, kro
 
 def oil_gas(So = 0, Swc = 0, rock_type = 'UW'):
-    if (So > 1) or (So <= 0):
+    if (So > 1) or (So < 0):
         print('Invalid input : So')
         return
-    if (Swc > 1) or (Swc <= 0):
+    if (Swc > 1) or (Swc < 0):
         print('Invalid input : Swc')
         return
     eff_so = So/(1-Swc)
